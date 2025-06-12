@@ -65,7 +65,7 @@ An `ObjectPool` backed by an internal linked-list. It can gradually grow by addi
 ### ArrayObjectPool
 
 An `ObjectPool` backed by an internal array. It can expand by allocating a larger array. When that happens, the previous array is retained as a [SoftReference](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/ref/SoftReference.html) to delay garbage collection as much as possible.
-You can manually release these references by calling its `releaseSoftReferences()` public method.
+You can manually release these previous array references by calling its `releaseSoftReferences()` public method.
 
 ### MultiArrayObjectPool
 
@@ -74,7 +74,7 @@ An `ObjectPool` backed by an internal doubly linked-list of arrays. It expands b
 ### StackObjectPool
 
 An `ObjectPool` backed by an internal stack, implemented with an array. It can expand by allocating a larger stack. When that happens, the previous array of the stack is retained as a [SoftReference](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/ref/SoftReference.html) to delay garbage collection as much as possible.
-You can manually release these references by calling its `releaseSoftReferences()` public method.
+You can manually release these previous array references by calling its `releaseSoftReferences()` public method.
 
 ### TieredObjectPool
 
